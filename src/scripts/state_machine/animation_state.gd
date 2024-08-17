@@ -1,5 +1,5 @@
 extends Node
-class_name State
+class_name AnimationState
 
 ## State in a state machine
 ## Each state contains:

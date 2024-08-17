@@ -1,4 +1,4 @@
-var idle := State.new(
+var idle := AnimationState.new(
 	"idle",
 	{
 		"up": "idle_up",
@@ -8,7 +8,7 @@ var idle := State.new(
 	}
 )
 
-var walking := State.new(
+var walking := AnimationState.new(
 	"walking",
 	{
 		"up": "walking_up",
@@ -18,7 +18,7 @@ var walking := State.new(
 	}
 )
 
-var running := State.new(
+var running := AnimationState.new(
 	"running",
 	{
 		"up": "running_up",

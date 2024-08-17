@@ -3,12 +3,14 @@ extends CharacterBody2D
 @export var speed = 400
 @onready var _animated_sprite = $AnimatedSprite2D
 
-var state_machine: StateMachine
+var vitals: Vitals
+var state_machine: AnimationStateMachine
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var player_states = load("res://src/scripts/player/animation_states.gd").new()
-	self.state_machine = StateMachine.new(
+	self.vitals = Vitals.new()
+	self.state_machine = AnimationStateMachine.new(
 		{
 			"idle": player_states.idle,
 			"walking": player_states.walking,
